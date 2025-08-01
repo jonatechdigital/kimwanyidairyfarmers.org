@@ -11,10 +11,8 @@
     <meta content="About Us" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
-    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/webflow.css" rel="stylesheet" type="text/css" />
     <link
       href="css/kimwanyi-dairy-cooperative.webflow.css"
       rel="stylesheet"
@@ -30,8 +28,10 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
-    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="images/webclip.png" rel="apple-touch-icon" />
+     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
     <!--  Keep this css code to improve the font quality -->
     <style>
       * {
@@ -318,7 +318,7 @@
         class="navbar1_component color-scheme-6 w-nav"
       >
         <div class="navbar1_container">
-          <a href="#" class="navbar1_logo-link w-nav-brand"
+          <a href="index.html" class="navbar1_logo-link w-nav-brand"
             ><img
               sizes="148.8249969482422px"
               height="44px"
@@ -344,6 +344,327 @@
                 href="about-us.html"
                 aria-current="page"
                 class="navbar1_link w-nav-link w--current"
+                >About Us</a
+              >
+              <a href="impact.html" class="navbar1_link w-nav-link"
+                >Our Impact</a
+              >
+              <a href="partner-with-us.html" class="navbar1_link w-nav-link"
+                >Partnerships</a
+              >
+            </div>
+            <div class="navbar1_menu-buttons">
+              <a href="form.html" class="button w-button">PARTNER WITH US</a>
+            </div>
+          </nav>
+          <div class="navbar1_menu-button w-nav-button">
+            <div class="menu-icon1">
+              <div class="menu-icon1_line-top"></div>
+              <div class="menu-icon1_line-middle">
+                <div class="menu-icon1_line-middle-inner"></div>
+              </div>
+              <div class="menu-icon1_line-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <body>
+    <div class="page-wrapper">
+      <div class="global-styles">
+        <div class="style-overrides w-embed">
+          <style>
+            /* Ensure all elements inherit the color from its parent */
+            a,
+            .w-input,
+            .w-select,
+            .w-tab-link,
+            .w-nav-link,
+            .w-nav-brand,
+            .w-dropdown-btn,
+            .w-dropdown-toggle,
+            .w-slider-arrow-left,
+            .w-slider-arrow-right,
+            .w-dropdown-link {
+              color: inherit;
+              text-decoration: inherit;
+              font-size: inherit;
+            }
+            /* Focus state style for keyboard navigation for the focusable elements */
+            *[tabindex]:focus-visible,
+            input[type="file"]:focus-visible {
+              outline: 0.125rem solid #4d65ff;
+              outline-offset: 0.125rem;
+            }
+            /* Get rid of top margin on first element in any rich text element */
+            .w-richtext > :not(div):first-child,
+            .w-richtext > div:first-child > :first-child {
+              margin-top: 0 !important;
+            }
+            /* Get rid of bottom margin on last element in any rich text element */
+            .w-richtext > :last-child,
+            .w-richtext ol li:last-child,
+            .w-richtext ul li:last-child {
+              margin-bottom: 0 !important;
+            }
+            /* Prevent all click and hover interaction with an element */
+            .pointer-events-off {
+              pointer-events: none;
+            }
+            /* Enables all click and hover interaction with an element */
+            .pointer-events-on {
+              pointer-events: auto;
+            }
+            /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+            .div-square::after {
+              content: "";
+              display: block;
+              padding-bottom: 100%;
+            }
+            /* Make sure containers never lose their center alignment */
+            .container-medium,
+            .container-small,
+            .container-large {
+              margin-right: auto !important;
+              margin-left: auto !important;
+            }
+            /* Apply "..." after 3 lines of text */
+            .text-style-3lines {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+            /* Apply "..." after 2 lines of text */
+            .text-style-2lines {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+            /* Adds inline flex display */
+            .display-inlineflex {
+              display: inline-flex;
+            }
+            /* These classes are never overwritten */
+            .hide {
+              display: none !important;
+            }
+            /* Remove default Webflow chevron from form select */
+            select {
+              -webkit-appearance: none;
+            }
+            @media screen and (max-width: 991px) {
+              .hide,
+              .hide-tablet {
+                display: none !important;
+              }
+            }
+            @media screen and (max-width: 767px) {
+              .hide-mobile-landscape {
+                display: none !important;
+              }
+            }
+            @media screen and (max-width: 479px) {
+              .hide-mobile {
+                display: none !important;
+              }
+            }
+            .margin-0 {
+              margin: 0rem !important;
+            }
+            .padding-0 {
+              padding: 0rem !important;
+            }
+            .spacing-clean {
+              padding: 0rem !important;
+              margin: 0rem !important;
+            }
+            .margin-top {
+              margin-right: 0rem !important;
+              margin-bottom: 0rem !important;
+              margin-left: 0rem !important;
+            }
+            .padding-top {
+              padding-right: 0rem !important;
+              padding-bottom: 0rem !important;
+              padding-left: 0rem !important;
+            }
+            .margin-right {
+              margin-top: 0rem !important;
+              margin-bottom: 0rem !important;
+              margin-left: 0rem !important;
+            }
+            .padding-right {
+              padding-top: 0rem !important;
+              padding-bottom: 0rem !important;
+              padding-left: 0rem !important;
+            }
+            .margin-bottom {
+              margin-top: 0rem !important;
+              margin-right: 0rem !important;
+              margin-left: 0rem !important;
+            }
+            .padding-bottom {
+              padding-top: 0rem !important;
+              padding-right: 0rem !important;
+              padding-left: 0rem !important;
+            }
+            .margin-left {
+              margin-top: 0rem !important;
+              margin-right: 0rem !important;
+              margin-bottom: 0rem !important;
+            }
+            .padding-left {
+              padding-top: 0rem !important;
+              padding-right: 0rem !important;
+              padding-bottom: 0rem !important;
+            }
+            .margin-horizontal {
+              margin-top: 0rem !important;
+              margin-bottom: 0rem !important;
+            }
+            .padding-horizontal {
+              padding-top: 0rem !important;
+              padding-bottom: 0rem !important;
+            }
+            .margin-vertical {
+              margin-right: 0rem !important;
+              margin-left: 0rem !important;
+            }
+            .padding-vertical {
+              padding-right: 0rem !important;
+              padding-left: 0rem !important;
+            }
+            /* Apply "..." at 100% width */
+            .truncate-width {
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            /* Removes native scrollbar */
+            .no-scrollbar {
+              -ms-overflow-style: none;
+              overflow: -moz-scrollbars-none;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+        </div>
+        <div class="fonts w-embed">
+          <style>
+            @import url("https://fonts.googleapis.com/css?family=Inter:700");
+          </style>
+          <style>
+            @import url("https://fonts.googleapis.com/css?family=Source%20Sans%203:400,500");
+          </style>
+        </div>
+        <div class="color-schemes w-embed">
+          <style>
+            .color-scheme-1 {
+            }
+            .color-scheme-2 {
+              --color-scheme-1--text: var(--color-scheme-2--text);
+              --color-scheme-1--background: var(--color-scheme-2--background);
+              --color-scheme-1--foreground: var(--color-scheme-2--foreground);
+              --color-scheme-1--border: var(--color-scheme-2--border);
+              --color-scheme-1--accent: var(--color-scheme-2--accent);
+            }
+            .color-scheme-3 {
+              --color-scheme-1--text: var(--color-scheme-3--text);
+              --color-scheme-1--background: var(--color-scheme-3--background);
+              --color-scheme-1--foreground: var(--color-scheme-3--foreground);
+              --color-scheme-1--border: var(--color-scheme-3--border);
+              --color-scheme-1--accent: var(--color-scheme-3--accent);
+            }
+            .color-scheme-4 {
+              --color-scheme-1--text: var(--color-scheme-4--text);
+              --color-scheme-1--background: var(--color-scheme-4--background);
+              --color-scheme-1--foreground: var(--color-scheme-4--foreground);
+              --color-scheme-1--border: var(--color-scheme-4--border);
+              --color-scheme-1--accent: var(--color-scheme-4--accent);
+            }
+            .color-scheme-5 {
+              --color-scheme-1--text: var(--color-scheme-5--text);
+              --color-scheme-1--background: var(--color-scheme-5--background);
+              --color-scheme-1--foreground: var(--color-scheme-5--foreground);
+              --color-scheme-1--border: var(--color-scheme-5--border);
+              --color-scheme-1--accent: var(--color-scheme-5--accent);
+            }
+            .color-scheme-6 {
+              --color-scheme-1--text: var(--color-scheme-6--text);
+              --color-scheme-1--background: var(--color-scheme-6--background);
+              --color-scheme-1--foreground: var(--color-scheme-6--foreground);
+              --color-scheme-1--border: var(--color-scheme-6--border);
+              --color-scheme-1--accent: var(--color-scheme-6--accent);
+            }
+            .color-scheme-7 {
+              --color-scheme-1--text: var(--color-scheme-7--text);
+              --color-scheme-1--background: var(--color-scheme-7--background);
+              --color-scheme-1--foreground: var(--color-scheme-7--foreground);
+              --color-scheme-1--border: var(--color-scheme-7--border);
+              --color-scheme-1--accent: var(--color-scheme-7--accent);
+            }
+            .color-scheme-8 {
+              --color-scheme-1--text: var(--color-scheme-8--text);
+              --color-scheme-1--background: var(--color-scheme-8--background);
+              --color-scheme-1--foreground: var(--color-scheme-8--foreground);
+              --color-scheme-1--border: var(--color-scheme-8--border);
+              --color-scheme-1--accent: var(--color-scheme-8--accent);
+            }
+            .w-slider-dot {
+              background-color: var(--color-scheme-1--text);
+              opacity: 0.2;
+            }
+            .w-slider-dot.w-active {
+              background-color: var(--color-scheme-1--text);
+              opacity: 1;
+            }
+            /* Override .w-slider-nav-invert styles */
+            .w-slider-nav-invert .w-slider-dot {
+              background-color: var(--color-scheme-1--text) !important;
+              opacity: 0.2 !important;
+            }
+            .w-slider-nav-invert .w-slider-dot.w-active {
+              background-color: var(--color-scheme-1--text) !important;
+              opacity: 1 !important;
+            }
+          </style>
+        </div>
+      </div>
+      <div
+        data-collapse="medium"
+        data-animation="default"
+        data-duration="400"
+        fs-scrolldisable-element="smart-nav"
+        data-easing="ease"
+        data-easing2="ease"
+        role="banner"
+        class="navbar1_component color-scheme-6 w-nav"
+      >
+        <div class="navbar1_container">
+          <a href="index.html" class="navbar1_logo-link w-nav-brand"
+            ><img
+              sizes="148.8249969482422px"
+              height="60px"
+              alt="Kimwanyi Dairy Farmers' Cooperative Logo"
+              src="logo/KIMWANYI LOGO WITH TEXT.svg.svg"
+              loading="eager"
+              class="navbar1_logo"
+          /></a>
+          <nav
+            role="navigation"
+            class="navbar1_menu is-page-height-tablet w-nav-menu"
+          >
+            <div class="navbar1_menu-links">
+              <a
+                href="index.html"
+                aria-current="page"
+                class="navbar1_link w-nav-link w--current"
+                >Home</a
+              >
+              <a href="about-us.html" class="navbar1_link w-nav-link"
                 >About Us</a
               >
               <a href="impact.html" class="navbar1_link w-nav-link"
