@@ -1996,8 +1996,11 @@ figcaption {
 }
 
 .header9_image-wrapper {
-  flex: none;
-  position: relative;
+  flex: 8; /* This makes it take 8 parts (approx. 80%) of the available space */
+  /* Ensure no fixed height here (e.g., height: auto;) */
+  /* Remove position: relative; if it was added in previous steps */
+  position: relative; /* Keep this if slider needs it for positioning */
+  height: 100%; /* Explicitly make it fill its flex allocated space */
 }
 
 .image-overlay-layer {
@@ -2012,12 +2015,14 @@ figcaption {
 }
 
 .header9_component {
-  flex-direction: column;
-  height: 100svh;
-  min-height: 100svh;
+  height: calc(100svh - 4.5rem); /* Sets height to remaining viewport space after navbar */
+  min-height: calc(100svh - 4.5rem); /* Ensures minimum height also covers this area */
   display: flex;
-  justify-content:flex-end; /* Add this line */
+  flex-direction: column; /* CRITICAL: Ensures children are laid out vertically */
+  /* Remove any 'position: relative;' or 'justify-content;' that might interfere here */
+  /* current code has 'justify-content: flex-end;' - remove it. */
 }
+
 
 .header9_background-image-wrapper {
   z-index: 0;
@@ -2028,13 +2033,14 @@ figcaption {
 }
 
 .header9_background-image {
-  vertical-align: middle;
+  /* Removed: vertical-align: middle; */
   object-fit: cover;
+  object-position:top; /* This ensures the image is positioned from the top of its container */
   width: 100%;
   height: 100%;
-  display: inline-block;
+  /* Removed: display: inline-block; */
   position: absolute;
-  inset: 0% 0% auto;
+  inset: 0; /* Ensures the image fills the entire container */
 }
 
 .header9_content-wrapper {
@@ -5085,5 +5091,24 @@ figcaption {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
 }
+@media screen and (max-width: 991px) {
+  .header9_component {
+    height: calc(100svh - 4rem); /* Adjusts for tablet and mobile navbar height */
+    min-height: calc(100svh - 4rem);
+  }
+}
+.slider {
+  height: 100%; /* Make the slider fill its parent (.header9_image-wrapper) */
+}
 
+.w-slider-mask {
+  height: 100%; /* Make the slider mask fill the slider */
+}
 
+/* Target the .padding-global div if it's the second child within header9_component */
+.padding-global.second-child-header { /* Use the specific class for clarity */
+  flex: 2; /* Takes the remaining 2 parts (approx. 20%) of the available space */
+  /* Remove any fixed height or absolute positioning properties */
+  /* This element will now automatically sit below the image wrapper */
+  /* Ensure its internal padding is managed by padding-global's original styles */
+}

@@ -1801,9 +1801,12 @@ textarea.w-select {
     background-color: #f2f2f2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* This adds the drop shadow */
 }
-
-/* This adds a margin to the top of your main content, so it isn't hidden by the fixed navbar */
 .main-wrapper {
-    margin-top: 0px; /* You may need to adjust this value to match the height of your navbar */
+    margin-top: 4.5rem; /* Pushes content below the desktop navbar */
 }
 
+@media screen and (max-width: 991px) {
+  .main-wrapper {
+    margin-top: 4rem; /* Adjusts for tablet and mobile landscape navbar height */
+  }
+}
