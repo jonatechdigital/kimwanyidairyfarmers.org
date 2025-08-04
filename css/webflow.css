@@ -1804,5 +1804,6 @@ textarea.w-select {
 
 /* This adds a margin to the top of your main content, so it isn't hidden by the fixed navbar */
 .main-wrapper {
-    margin-top: 70px; /* You may need to adjust this value to match the height of your navbar */
+    margin-top: 0px; /* You may need to adjust this value to match the height of your navbar */
 }
+

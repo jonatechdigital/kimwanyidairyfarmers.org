@@ -2016,10 +2016,12 @@ figcaption {
   height: 100svh;
   min-height: 100svh;
   display: flex;
+  justify-content:flex-end; /* Add this line */
 }
 
 .header9_background-image-wrapper {
   z-index: 0;
+
   background-image: linear-gradient(#00000080, #00000080);
   position: absolute;
   inset: 0%;
