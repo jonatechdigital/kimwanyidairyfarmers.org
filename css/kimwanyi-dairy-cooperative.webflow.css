@@ -724,7 +724,7 @@ figcaption {
 }
 
 .heading-style-h1 {
-  color: var(--_primitives---colors--sushi-darkest);
+  color: #036140;
   letter-spacing: -.045rem;
   font-size: 3.25rem;
   font-weight: 700;
@@ -1949,7 +1949,10 @@ figcaption {
   min-height: 4.5rem;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 0.5%;
+  padding-bottom:0.5%;
   display: flex;
+
 }
 
 .navbar1_container {
@@ -1980,6 +1983,7 @@ figcaption {
 
 .navbar1_logo-link {
   padding-left: 0;
+  height: 100%;
 }
 
 .navbar1_dropdown-list.w--open {
@@ -5112,3 +5116,12 @@ figcaption {
   /* This element will now automatically sit below the image wrapper */
   /* Ensure its internal padding is managed by padding-global's original styles */
 }
+/* -- Responsive Navbar Padding Fix -- */
+
+@media screen and (max-width: 767px) {
+  .navbar-container .navbar-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+

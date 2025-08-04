@@ -1802,11 +1802,5 @@ textarea.w-select {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* This adds the drop shadow */
 }
 .main-wrapper {
-    margin-top: 4.5rem; /* Pushes content below the desktop navbar */
-}
-
-@media screen and (max-width: 991px) {
-  .main-wrapper {
-    margin-top: 4rem; /* Adjusts for tablet and mobile landscape navbar height */
-  }
+    margin-top: 4.5rem; /* Adjust this value based on the height of your navbar */
 }
